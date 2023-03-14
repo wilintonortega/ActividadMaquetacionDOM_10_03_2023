@@ -297,6 +297,45 @@ textarea.input {
   opacity: 0.2;
 }
 
+/*Estilos CSS input*/
+.form__group{
+  position: relative;
+  --color:#5757577e;
+
+}
+.form__input
+{
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .6em .3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+}
+
+.form__label
+{
+  color:var(--color);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+} 
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown)+.form__label
+{
+
+  transform: translateY(-30px) scale(.7);
+  transform-origin:top left;
+  --color: #3866f2;
+
+}
+
+
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
